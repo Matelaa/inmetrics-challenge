@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDA5DF1265D266455C85DE61 /* Pods_inmetrics_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24726615C9CA51272859F128 /* Pods_inmetrics_challenge.framework */; };
+		F20970522A27AA530002B39C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20970512A27AA530002B39C /* UserViewModel.swift */; };
+		F20970552A27AD630002B39C /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20970542A27AD630002B39C /* UserListTableViewCell.swift */; };
+		F25272062A27050100D02EE0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25272052A27050100D02EE0 /* UserService.swift */; };
+		F25272092A270C1C00D02EE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25272082A270C1C00D02EE0 /* User.swift */; };
 		F29F1CF32A26931000319E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF22A26931000319E4C /* AppDelegate.swift */; };
 		F29F1CF52A26931000319E4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF42A26931000319E4C /* SceneDelegate.swift */; };
-		F29F1CF72A26931000319E4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF62A26931000319E4C /* ViewController.swift */; };
+		F29F1CF72A26931000319E4C /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF62A26931000319E4C /* UserListViewController.swift */; };
 		F29F1CFC2A26931200319E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29F1CFB2A26931200319E4C /* Assets.xcassets */; };
 		F29F1CFF2A26931200319E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29F1CFD2A26931200319E4C /* LaunchScreen.storyboard */; };
 		F29F1D0A2A26931300319E4C /* inmetrics_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1D092A26931300319E4C /* inmetrics_challengeTests.swift */; };
@@ -35,10 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24726615C9CA51272859F128 /* Pods_inmetrics_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inmetrics_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3273482CC9596AFC3FA17491 /* Pods-inmetrics-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inmetrics-challenge.release.xcconfig"; path = "Target Support Files/Pods-inmetrics-challenge/Pods-inmetrics-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		6D723095C5C55022DFB4C78E /* Pods-inmetrics-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inmetrics-challenge.debug.xcconfig"; path = "Target Support Files/Pods-inmetrics-challenge/Pods-inmetrics-challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		F20970512A27AA530002B39C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F20970542A27AD630002B39C /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		F25272052A27050100D02EE0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F25272082A270C1C00D02EE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F29F1CEF2A26931000319E4C /* inmetrics-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inmetrics-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29F1CF22A26931000319E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F29F1CF42A26931000319E4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F29F1CF62A26931000319E4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F29F1CF62A26931000319E4C /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		F29F1CFB2A26931200319E4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F29F1CFE2A26931200319E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29F1D002A26931200319E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA5DF1265D266455C85DE61 /* Pods_inmetrics_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38D4FE86A7622C1F8B1DA411 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D723095C5C55022DFB4C78E /* Pods-inmetrics-challenge.debug.xcconfig */,
+				3273482CC9596AFC3FA17491 /* Pods-inmetrics-challenge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4FAF57E00020E05586B9A1AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24726615C9CA51272859F128 /* Pods_inmetrics_challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F209704F2A27AA3C0002B39C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F20970512A27AA530002B39C /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F20970502A27AA420002B39C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F20970532A27AD410002B39C /* Cell */,
+				F29F1CF62A26931000319E4C /* UserListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F20970532A27AD410002B39C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F20970542A27AD630002B39C /* UserListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F25272042A2704E000D02EE0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F25272052A27050100D02EE0 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F25272072A270C1000D02EE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F25272082A270C1C00D02EE0 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F29F1CE62A26931000319E4C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +153,8 @@
 				F29F1D082A26931300319E4C /* inmetrics-challengeTests */,
 				F29F1D122A26931300319E4C /* inmetrics-challengeUITests */,
 				F29F1CF02A26931000319E4C /* Products */,
+				38D4FE86A7622C1F8B1DA411 /* Pods */,
+				4FAF57E00020E05586B9A1AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +171,12 @@
 		F29F1CF12A26931000319E4C /* inmetrics-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				F20970502A27AA420002B39C /* Controllers */,
+				F209704F2A27AA3C0002B39C /* ViewModel */,
+				F25272072A270C1000D02EE0 /* Model */,
+				F25272042A2704E000D02EE0 /* Service */,
 				F29F1CF22A26931000319E4C /* AppDelegate.swift */,
 				F29F1CF42A26931000319E4C /* SceneDelegate.swift */,
-				F29F1CF62A26931000319E4C /* ViewController.swift */,
 				F29F1CFB2A26931200319E4C /* Assets.xcassets */,
 				F29F1CFD2A26931200319E4C /* LaunchScreen.storyboard */,
 				F29F1D002A26931200319E4C /* Info.plist */,
@@ -131,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F29F1D192A26931300319E4C /* Build configuration list for PBXNativeTarget "inmetrics-challenge" */;
 			buildPhases = (
+				DC4BA31E4C70CDF8CE4A4CA5 /* [CP] Check Pods Manifest.lock */,
 				F29F1CEB2A26931000319E4C /* Sources */,
 				F29F1CEC2A26931000319E4C /* Frameworks */,
 				F29F1CED2A26931000319E4C /* Resources */,
+				06B7082F2E2008C1A3FA78AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,14 +328,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06B7082F2E2008C1A3FA78AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inmetrics-challenge/Pods-inmetrics-challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inmetrics-challenge/Pods-inmetrics-challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-inmetrics-challenge/Pods-inmetrics-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4BA31E4C70CDF8CE4A4CA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-inmetrics-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F29F1CEB2A26931000319E4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29F1CF72A26931000319E4C /* ViewController.swift in Sources */,
+				F25272062A27050100D02EE0 /* UserService.swift in Sources */,
+				F20970522A27AA530002B39C /* UserViewModel.swift in Sources */,
+				F29F1CF72A26931000319E4C /* UserListViewController.swift in Sources */,
 				F29F1CF32A26931000319E4C /* AppDelegate.swift in Sources */,
+				F25272092A270C1C00D02EE0 /* User.swift in Sources */,
 				F29F1CF52A26931000319E4C /* SceneDelegate.swift in Sources */,
+				F20970552A27AD630002B39C /* UserListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +545,7 @@
 		};
 		F29F1D1A2A26931300319E4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D723095C5C55022DFB4C78E /* Pods-inmetrics-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +573,7 @@
 		};
 		F29F1D1B2A26931300319E4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3273482CC9596AFC3FA17491 /* Pods-inmetrics-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
