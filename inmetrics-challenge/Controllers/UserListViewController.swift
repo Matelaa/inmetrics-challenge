@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UserListViewController.swift
 //  inmetrics-challenge
 //
 //  Created by José Matela Neto on 30/05/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserListViewController: UIViewController {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .red
-        self.setupUI()
         
+        self.viewModel.delegate = self
         self.viewModel.getUsers()
     }
     
@@ -30,6 +30,15 @@ class ViewController: UIViewController {
         self.view.addSubview(self.tableView)
         
         self.setupConstraints()
+        
+        self.setupTableView()
+    }
+    
+    private func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(UserListTableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.separatorStyle = .none
     }
     
     private func setupConstraints() {
@@ -47,3 +56,25 @@ class ViewController: UIViewController {
     }
 }
 
+extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UserListTableViewCell
+        
+        cell.bind(user: self.viewModel.users.first!)
+        
+        return cell
+    }
+}
+
+extension UserListViewController: UserViewModelDelegate {
+    func getUsersList() {
+        DispatchQueue.main.async {
+            self.setupUI()
+            self.tableView.reloadData()
+        }
+    }
+}
