@@ -10,16 +10,20 @@ import Kingfisher
 
 class UserListTableViewCell: UITableViewCell {
     
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     lazy var userImageView: UIImageView = {
         let image = UIImage()
         let imageView = UIImageView(image: image)
-        
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         return imageView
     }()
     
-    lazy var userNameLabem: UILabel = {
+    lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -30,6 +34,9 @@ class UserListTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.selectionStyle = .none
+        
         self.setupUI()
     }
     
@@ -38,39 +45,74 @@ class UserListTableViewCell: UITableViewCell {
     }
     
     var user: User!
+    let viewModel = UserViewModel()
     
-    /* MARK: - TODO: 1. Setar o nome
-       MARK: - TODO: 2. Estilizar celula
-       MARK: - TODO: 3. Mudar para ViewModel a setagem de URL
-    */
     func bind(user: User) {
         self.user = user
-        let url = URL(string: self.user.userImage)
-        self.userImageView.kf.setImage(with: url)
+        let urlAvatarImage = self.viewModel.setupImageOfUserInCell(userAvatarUrl: self.user.userImage)
+        self.userImageView.kf.setImage(with: urlAvatarImage)
+        self.userNameLabel.text = self.user.login
+    }
+    
+    private func setupCornerRadiusInCell() {
+        self.clipsToBounds = true
+        self.containerView.layer.cornerRadius = 10
+    }
+    
+    private func setupShadows() {
+        self.containerView.layer.shadowColor = UIColor.black.cgColor
+        self.containerView.layer.shadowOpacity = 0.4
+        self.containerView.layer.shadowOffset = .zero
+        self.containerView.layer.shadowRadius = 1
     }
     
     private func setupUI() {
-        self.addSubview(self.userImageView)
-//        self.addSubview(self.userNameLabel)
+        self.setupCornerRadiusInCell()
+        self.setupShadows()
+        
+        self.addSubview(self.containerView)
+        
+        self.containerView.addSubview(self.userImageView)
+        self.containerView.addSubview(self.userNameLabel)
         
         self.setupConstraints()
     }
     
     private func setupConstraints() {
+        self.setupContainerView()
         self.setupUserImageView()
         self.setupUserNameLabel()
     }
     
+    private func setupContainerView() {
+        NSLayoutConstraint.activate([
+            self.containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            self.containerView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
+            self.containerView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+            self.containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+        ])
+        
+        self.containerView.backgroundColor = .white
+    }
+    
     private func setupUserImageView() {
         NSLayoutConstraint.activate([
-            self.userImageView.heightAnchor.constraint(equalToConstant: 20),
-            self.userImageView.widthAnchor.constraint(equalToConstant: 20),
-            self.userImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.userImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            self.userImageView.heightAnchor.constraint(equalToConstant: 70),
+            self.userImageView.widthAnchor.constraint(equalToConstant: 70),
+            self.userImageView.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor),
+            self.userImageView.leftAnchor.constraint(equalTo: self.containerView.leftAnchor, constant: 12)
         ])
+        
+        self.layoutIfNeeded()
+        self.userImageView.layer.masksToBounds = true
+        self.userImageView.layer.cornerRadius = self.userImageView.frame.size.width / 2
     }
     
     private func setupUserNameLabel() {
-        
+        NSLayoutConstraint.activate([
+            self.userNameLabel.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor),
+            self.userNameLabel.leftAnchor.constraint(equalTo: self.userImageView.rightAnchor, constant: 12),
+            self.userNameLabel.rightAnchor.constraint(equalTo: self.containerView.rightAnchor)
+        ])
     }
 }
