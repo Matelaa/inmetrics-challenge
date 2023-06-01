@@ -7,20 +7,26 @@
 
 import Foundation
 
-protocol UserViewModelDelegate {
-    func getUsersList()
+protocol UserViewModelDelegate: AnyObject {
+    func onIsLoadChange()
 }
 
 class UserViewModel {
     
-    var delegate: UserViewModelDelegate!
+    weak var delegate: UserViewModelDelegate?
     let service = UserService()
     var users = [User]()
+    var isLoading: Bool = false
+    var since: Int = 0
     
     func getUsers() {
-        self.service.fetchUsers { user in
-            self.users.append(contentsOf: user)
-            self.delegate.getUsersList()
+        self.isLoading = true
+        self.delegate?.onIsLoadChange()
+        self.service.fetchUsers(since: self.since) { [weak self] lastId, user  in
+            self?.since = lastId
+            self?.users.append(contentsOf: user)
+            self?.isLoading = false
+            self?.delegate?.onIsLoadChange()
         }
     }
     

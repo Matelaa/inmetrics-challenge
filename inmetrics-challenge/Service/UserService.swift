@@ -8,21 +8,26 @@
 import Foundation
 
 class UserService {
-    let baseURL: String = "https://api.github.com/users"
     
-    //MARK: TODO - 1. Verificar e criar paginacao para listagem de usuarios
-    
-    func fetchUsers(completion: @escaping ([User]) -> ()) {
-        let url = URL(string: self.baseURL)!
+    func fetchUsers(since: Int, completion: @escaping (Int, [User]) -> ()) {
+        let baseURL: String = "https://api.github.com/users?since=\(since)&per_page=30"
+        let url = URL(string: baseURL)!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
+            
+            //MARK: TODO - trabalhar com as responses (httpcode), e caso tenha erro para tratar
             print("RESPONSE: \(String(describing: response))")
             print("ERROR: \(String(describing: error?.localizedDescription))")
             
             if let data = data {
                 let users = try? JSONDecoder().decode([User].self, from: data)
-                completion(users!)
+                if let lastId = users?.last?.id {
+                    //MARK: DISCLAIMER - Esse metodo so esta aqui para poder de fato mostrar o loading funcionando
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        completion(lastId, users!)
+                    }
+                }
             }
         }
         task.resume()
