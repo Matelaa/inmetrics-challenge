@@ -18,9 +18,14 @@ class UserViewModel {
     var users = [User]()
     
     func getUsers() {
-        self.service.fetchUsers { users in
-            self.users.append(users.first!)
+        self.service.fetchUsers { user in
+            self.users.append(contentsOf: user)
             self.delegate.getUsersList()
         }
+    }
+    
+    func setupImageOfUserInCell(userAvatarUrl: String) -> URL? {
+        let url = URL(string: userAvatarUrl)
+        return url
     }
 }
