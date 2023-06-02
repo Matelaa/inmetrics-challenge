@@ -12,6 +12,11 @@
 		F20970552A27AD630002B39C /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20970542A27AD630002B39C /* UserListTableViewCell.swift */; };
 		F25272062A27050100D02EE0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25272052A27050100D02EE0 /* UserService.swift */; };
 		F25272092A270C1C00D02EE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25272082A270C1C00D02EE0 /* User.swift */; };
+		F28FAB702A293E6A0063FF68 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB6F2A293E6A0063FF68 /* Repository.swift */; };
+		F28FAB722A293F650063FF68 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB712A293F650063FF68 /* RepositoryService.swift */; };
+		F28FAB742A29405F0063FF68 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB732A29405F0063FF68 /* RepositoryViewModel.swift */; };
+		F28FAB762A2940C20063FF68 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB752A2940C20063FF68 /* RepositoryViewController.swift */; };
+		F28FAB792A2948D10063FF68 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB782A2948D10063FF68 /* RepositoryTableViewCell.swift */; };
 		F29F1CF32A26931000319E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF22A26931000319E4C /* AppDelegate.swift */; };
 		F29F1CF52A26931000319E4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF42A26931000319E4C /* SceneDelegate.swift */; };
 		F29F1CF72A26931000319E4C /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF62A26931000319E4C /* UserListViewController.swift */; };
@@ -47,6 +52,11 @@
 		F20970542A27AD630002B39C /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		F25272052A27050100D02EE0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F25272082A270C1C00D02EE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F28FAB6F2A293E6A0063FF68 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		F28FAB712A293F650063FF68 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		F28FAB732A29405F0063FF68 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		F28FAB752A2940C20063FF68 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		F28FAB782A2948D10063FF68 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		F29F1CEF2A26931000319E4C /* inmetrics-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inmetrics-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29F1CF22A26931000319E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F29F1CF42A26931000319E4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +103,6 @@
 				6D723095C5C55022DFB4C78E /* Pods-inmetrics-challenge.debug.xcconfig */,
 				3273482CC9596AFC3FA17491 /* Pods-inmetrics-challenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,6 +155,79 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F27944BD2A2A52FD009524C5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F29F1CF42A26931000319E4C /* SceneDelegate.swift */,
+				F29F1CF22A26931000319E4C /* AppDelegate.swift */,
+				F29F1CFB2A26931200319E4C /* Assets.xcassets */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F28FAB682A2910A30063FF68 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F25272072A270C1000D02EE0 /* Model */,
+				F25272042A2704E000D02EE0 /* Service */,
+				F209704F2A27AA3C0002B39C /* ViewModel */,
+				F20970502A27AA420002B39C /* Controllers */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		F28FAB6A2A2910CA0063FF68 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F28FAB6B2A2910E50063FF68 /* Model */,
+				F28FAB6C2A2910EC0063FF68 /* Service */,
+				F28FAB6D2A29110B0063FF68 /* ViewModel */,
+				F28FAB6E2A2911100063FF68 /* Controllers */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F28FAB6B2A2910E50063FF68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F28FAB6F2A293E6A0063FF68 /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F28FAB6C2A2910EC0063FF68 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F28FAB712A293F650063FF68 /* RepositoryService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F28FAB6D2A29110B0063FF68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F28FAB732A29405F0063FF68 /* RepositoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F28FAB6E2A2911100063FF68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F28FAB772A2948B60063FF68 /* Cell */,
+				F28FAB752A2940C20063FF68 /* RepositoryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F28FAB772A2948B60063FF68 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F28FAB782A2948D10063FF68 /* RepositoryTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F29F1CE62A26931000319E4C = {
 			isa = PBXGroup;
 			children = (
@@ -171,13 +253,9 @@
 		F29F1CF12A26931000319E4C /* inmetrics-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				F20970502A27AA420002B39C /* Controllers */,
-				F209704F2A27AA3C0002B39C /* ViewModel */,
-				F25272072A270C1000D02EE0 /* Model */,
-				F25272042A2704E000D02EE0 /* Service */,
-				F29F1CF22A26931000319E4C /* AppDelegate.swift */,
-				F29F1CF42A26931000319E4C /* SceneDelegate.swift */,
-				F29F1CFB2A26931200319E4C /* Assets.xcassets */,
+				F27944BD2A2A52FD009524C5 /* Application */,
+				F28FAB682A2910A30063FF68 /* User */,
+				F28FAB6A2A2910CA0063FF68 /* Repository */,
 				F29F1CFD2A26931200319E4C /* LaunchScreen.storyboard */,
 				F29F1D002A26931200319E4C /* Info.plist */,
 			);
@@ -376,10 +454,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25272062A27050100D02EE0 /* UserService.swift in Sources */,
+				F28FAB762A2940C20063FF68 /* RepositoryViewController.swift in Sources */,
 				F20970522A27AA530002B39C /* UserViewModel.swift in Sources */,
+				F28FAB792A2948D10063FF68 /* RepositoryTableViewCell.swift in Sources */,
+				F28FAB742A29405F0063FF68 /* RepositoryViewModel.swift in Sources */,
 				F29F1CF72A26931000319E4C /* UserListViewController.swift in Sources */,
+				F28FAB702A293E6A0063FF68 /* Repository.swift in Sources */,
 				F29F1CF32A26931000319E4C /* AppDelegate.swift in Sources */,
 				F25272092A270C1C00D02EE0 /* User.swift in Sources */,
+				F28FAB722A293F650063FF68 /* RepositoryService.swift in Sources */,
 				F29F1CF52A26931000319E4C /* SceneDelegate.swift in Sources */,
 				F20970552A27AD630002B39C /* UserListTableViewCell.swift in Sources */,
 			);
