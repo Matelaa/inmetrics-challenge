@@ -34,9 +34,6 @@ class UserService {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
-            print("RESPONSE: \(String(describing: response))")
-            print("ERROR: \(String(describing: error?.localizedDescription))")
-            
             if let data = data {
                 let data = try? JSONDecoder().decode(APIResponse.self, from: data)
                 if let users = data?.items {

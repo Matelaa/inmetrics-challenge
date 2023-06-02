@@ -14,10 +14,6 @@ class RepositoryService {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
-            //MARK: TODO - trabalhar com as responses (httpcode), e caso tenha erro para tratar
-            print("RESPONSE: \(String(describing: response))")
-            print("ERROR: \(String(describing: error?.localizedDescription))")
-            
             if let data = data {
                 let user = try? JSONDecoder().decode(User.self, from: data)
                 //MARK: DISCLAIMER - Esse metodo so esta aqui para poder de fato mostrar o loading funcionando
@@ -35,10 +31,6 @@ class RepositoryService {
         let url = URL(string: baseURL)!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            //MARK: TODO - trabalhar com as responses (httpcode), e caso tenha erro para tratar
-            print("RESPONSE: \(String(describing: response))")
-            print("ERROR: \(String(describing: error?.localizedDescription))")
             
             if let data = data {
                 let repositories = try? JSONDecoder().decode([Repository].self, from: data)

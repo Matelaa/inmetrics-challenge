@@ -25,10 +25,10 @@ class RepositoryViewModel {
         self.delegate?.onIsLoadChange()
         self.service.fetchUserInfo(baseURL: url) { user in
             self.user = user
-            self.service.fetchRepositories(name: self.user.login, page: self.pageRepositories) { repository in
-                self.isLoading = false
-                self.repositories.append(contentsOf: repository)
-                self.delegate?.onIsLoadChange()
+            self.service.fetchRepositories(name: self.user.login, page: self.pageRepositories) { [weak self] repository in
+                self?.isLoading = false
+                self?.repositories.append(contentsOf: repository)
+                self?.delegate?.onIsLoadChange()
             }
         }
     }
@@ -42,10 +42,6 @@ class RepositoryViewModel {
             self?.repositories.append(contentsOf: repository)
             self?.delegate?.onIsLoadChange()
         }
-    }
-    
-    func checkRepositoriesIsEmpty(repositories: [Repository]) -> Bool {
-        return repositories.count == 0 ? true : false
     }
     
     func checkLanguagueIsEmpty(repository: Repository) -> String {

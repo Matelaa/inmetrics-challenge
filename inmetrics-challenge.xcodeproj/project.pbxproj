@@ -12,6 +12,7 @@
 		F20970552A27AD630002B39C /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20970542A27AD630002B39C /* UserListTableViewCell.swift */; };
 		F25272062A27050100D02EE0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25272052A27050100D02EE0 /* UserService.swift */; };
 		F25272092A270C1C00D02EE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25272082A270C1C00D02EE0 /* User.swift */; };
+		F27944C02A2A5F90009524C5 /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27944BF2A2A5F90009524C5 /* UserModelTests.swift */; };
 		F28FAB702A293E6A0063FF68 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB6F2A293E6A0063FF68 /* Repository.swift */; };
 		F28FAB722A293F650063FF68 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB712A293F650063FF68 /* RepositoryService.swift */; };
 		F28FAB742A29405F0063FF68 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28FAB732A29405F0063FF68 /* RepositoryViewModel.swift */; };
@@ -22,7 +23,7 @@
 		F29F1CF72A26931000319E4C /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1CF62A26931000319E4C /* UserListViewController.swift */; };
 		F29F1CFC2A26931200319E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29F1CFB2A26931200319E4C /* Assets.xcassets */; };
 		F29F1CFF2A26931200319E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29F1CFD2A26931200319E4C /* LaunchScreen.storyboard */; };
-		F29F1D0A2A26931300319E4C /* inmetrics_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1D092A26931300319E4C /* inmetrics_challengeTests.swift */; };
+		F29F1D0A2A26931300319E4C /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1D092A26931300319E4C /* UserServiceTests.swift */; };
 		F29F1D142A26931300319E4C /* inmetrics_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1D132A26931300319E4C /* inmetrics_challengeUITests.swift */; };
 		F29F1D162A26931300319E4C /* inmetrics_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F1D152A26931300319E4C /* inmetrics_challengeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		F20970542A27AD630002B39C /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		F25272052A27050100D02EE0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F25272082A270C1C00D02EE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F27944BF2A2A5F90009524C5 /* UserModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
 		F28FAB6F2A293E6A0063FF68 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F28FAB712A293F650063FF68 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		F28FAB732A29405F0063FF68 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		F29F1CFE2A26931200319E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F29F1D002A26931200319E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29F1D052A26931300319E4C /* inmetrics-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "inmetrics-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F29F1D092A26931300319E4C /* inmetrics_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inmetrics_challengeTests.swift; sourceTree = "<group>"; };
+		F29F1D092A26931300319E4C /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
 		F29F1D0F2A26931300319E4C /* inmetrics-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "inmetrics-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29F1D132A26931300319E4C /* inmetrics_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inmetrics_challengeUITests.swift; sourceTree = "<group>"; };
 		F29F1D152A26931300319E4C /* inmetrics_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inmetrics_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -163,6 +165,15 @@
 				F29F1CFB2A26931200319E4C /* Assets.xcassets */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		F27944C92A2A69F4009524C5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F29F1D092A26931300319E4C /* UserServiceTests.swift */,
+				F27944BF2A2A5F90009524C5 /* UserModelTests.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		F28FAB682A2910A30063FF68 /* User */ = {
@@ -265,7 +276,7 @@
 		F29F1D082A26931300319E4C /* inmetrics-challengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F29F1D092A26931300319E4C /* inmetrics_challengeTests.swift */,
+				F27944C92A2A69F4009524C5 /* User */,
 			);
 			path = "inmetrics-challengeTests";
 			sourceTree = "<group>";
@@ -472,7 +483,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29F1D0A2A26931300319E4C /* inmetrics_challengeTests.swift in Sources */,
+				F27944C02A2A5F90009524C5 /* UserModelTests.swift in Sources */,
+				F29F1D0A2A26931300319E4C /* UserServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
