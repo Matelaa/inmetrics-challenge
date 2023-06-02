@@ -79,12 +79,12 @@ class UserListTableViewCell: UITableViewCell {
     }
     
     private func setupConstraints() {
-        self.setupContainerView()
-        self.setupUserImageView()
-        self.setupUserNameLabel()
+        self.setupContainerViewConstraints()
+        self.setupUserImageViewConstraints()
+        self.setupUserNameLabelConstraints()
     }
     
-    private func setupContainerView() {
+    private func setupContainerViewConstraints() {
         NSLayoutConstraint.activate([
             self.containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.containerView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
@@ -95,7 +95,7 @@ class UserListTableViewCell: UITableViewCell {
         self.containerView.backgroundColor = .white
     }
     
-    private func setupUserImageView() {
+    private func setupUserImageViewConstraints() {
         NSLayoutConstraint.activate([
             self.userImageView.heightAnchor.constraint(equalToConstant: 70),
             self.userImageView.widthAnchor.constraint(equalToConstant: 70),
@@ -108,7 +108,7 @@ class UserListTableViewCell: UITableViewCell {
         self.userImageView.layer.cornerRadius = self.userImageView.frame.size.width / 2
     }
     
-    private func setupUserNameLabel() {
+    private func setupUserNameLabelConstraints() {
         NSLayoutConstraint.activate([
             self.userNameLabel.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor),
             self.userNameLabel.leftAnchor.constraint(equalTo: self.userImageView.rightAnchor, constant: 12),
